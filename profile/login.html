@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>로그인</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body id = "grid">
+    <div class = "login">
+      <div></div>
+      <div>
+        <img id="img" src="pencil.png" style=" width:50px; height:50px; ">
+        <div id="reg">우리팀명?</div>
+      </div>
+      <div></div>
+    </div>
+    
+    <div class="login-form">
+      <div></div>
+      <form>
+        <span>
+          <input id = "inpemail" type = "text" name = "email" placeholder="이메일 주소 입력" autofocus />
+          <input id = "inppassword" type="text" name="password" placeholder="비밀번호">
+        </span>
+        <input id = "submit-btn" type="button" value="로그인" class="submit-btn">
+        <br>
+        <input id="regist" type="button" value="회원가입" onclick="location.href='register.html'">
+      </form>
+      <div></div>
+    </div>
+</body>
+</html>
