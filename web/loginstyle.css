@@ -1,0 +1,49 @@
+/*로그인창*/
+* {
+    background-color:whitesmoke;
+    color:#00046E;  
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+}
+
+#login {
+    display: grid;
+    grid-template-columns:  2fr 3fr;
+}
+#inpemail {
+    height: 30px;
+    width: 250px;
+    border-bottom-width: 1px;
+    border-left-width:0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    color: black;
+    background-color: white;
+    outline:none;
+}
+
+#inppassword {
+    height: 30px;
+    width: 250px;
+    border-bottom-width: 1px;
+    border-left-width:0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    color: black;
+    background-color: white;
+    outline:none;
+}
+
+#submit-btn {
+   
+    text-align: center;
+    margin-top: 30px;
+    border: none; 
+    height: 30px;
+    width: 80px;
+    background-color: #944c92;
+    border-radius: 3px;
+}
