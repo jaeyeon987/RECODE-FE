@@ -17,6 +17,10 @@ for(var j = 0; j < target.length; j++){
   });
 }
 
+const regEmail =
+  /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+const regPw = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
+
 
 function email() {
     if(document.querySelector('#btn-email').value === '인증코드 발급'){
@@ -64,7 +68,7 @@ $('#form-register').submit(function(e) {
 
     var email = $('#inp-email').val();
 
-    if(!validateEmail(email)) {
+    if(!regEmail(email)) {
         $('#inp-email').next().html('잘못된 형식입니다').show();
         return;
     }

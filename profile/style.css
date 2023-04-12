@@ -1,23 +1,50 @@
 /*회원가입*/
-* {
-    background-color:whitesmoke;
-    color:#00046E;  
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-#container {
+
+* {
+    background-color:#f5f5f5;
+    color:#00046E;  
+    font-family: 'GmarketSansMedium';
+}
+
+/*#container {
     display: grid;
     grid-template-rows: 200px 1fr;
-}
+}*/
 
 #header {
     text-align: center;
 }
 
+#left {
+    display: grid;
+    grid-template-rows: 200px 1fr;
+}
+
+.from-box{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    box-shadow: 5px 10px 30px 3px rgb(151, 151, 151);
+    width: 90%;
+    height: 95vh;
+    /*border: 5px solid;*/
+    border-radius: 30px;
+    margin-left: 3%;
+    margin-right: 3%;
+
+}
 
 .reg {
     text-align: center;
-    font-size: 40px;
-    font-weight: 900;
+    font-size: 50px;
+    font-weight:bold;
 }
 
 .info {
@@ -29,7 +56,7 @@
     display: grid;
     grid-template-columns: 3fr 3fr 1fr;
 }
-.from-box .inner { padding:60px 70px; }
+.from-box .inner { padding:10px 30px; }
 
 #from-register { font-size: 15px; }
 
@@ -59,7 +86,7 @@
 
 #inpemail {
     height: 30px;
-    width: 250px;
+    width: 300px;
     border-bottom-width: 1px;
     border-left-width:0px;
     border-right-width: 0px;
@@ -69,9 +96,9 @@
     outline:none;
 }
 
-#inp-auth {
+#inpauth {
     height: 30px;
-    width: 150px;
+    width: 300px;
     border-bottom-width: 1px;
     border-left-width:0px;
     border-right-width: 0px;
@@ -81,8 +108,8 @@
     outline:none;
 }
 
-#inp-nick {
-    width: 150px;
+#nick {
+    width: 300px;
     height: 30px;
     border-bottom-width: 1px;
     border-left-width:0px;
@@ -93,7 +120,7 @@
     outline:none;
 }
 
-#inp-passwd {
+#passwd {
     height: 30px;
     border-bottom-width: 1px;
     border-left-width:0px;
@@ -104,7 +131,7 @@
     outline:none;
 } 
 
-#inp-passwd2 {
+#passwd2 {
     height: 30px;
     border-bottom-width: 1px;
     border-left-width:0px;
@@ -122,7 +149,7 @@
 }
 
 .notice-auth {
-    font-size: 15px;
+    font-size: 7px;
     color:red;
     font-weight: 600;
 }
@@ -144,17 +171,36 @@
 
 #btn {
     height: 30px;
-    width: 50px;
+    width: 130px;
     border: none; 
-    background-color: violet;
+    background-color: #00046E;
+    color:#f5f5f5;
     border-radius: 3px;
 }
 
+#btnpassword {
+    height: 30px;
+    width: 50px;
+    border: none; 
+    background-color: #00046E;
+    color:#f5f5f5;
+    border-radius: 3px;
+}  
+
+#nickbtn {
+    height: 30px;
+    width: 50px;
+    border: none; 
+    background-color: #00046E;
+    color:#f5f5f5;
+    border-radius: 3px;
+}
 #btn-email {
     height: 30px;
-    width: auto;
+    width: 130px;
     border: none; 
-    background-color: violet;
+    background-color: #00046E;
+    color:#f5f5f5;
     border-radius: 3px;
 }
 #inp-accept { margin-top: 30px; }
@@ -169,19 +215,33 @@
     border: none; 
     height: 30px;
     width: 80px;
-    background-color: violet;
+    background-color: #00046E;
+    color:#f5f5f5;
     border-radius: 3px;
 }
 
 .btn_open{
-    font-weight:bold; 
+    height: 30px;
+    width: 130px;
+    border: none; 
+    background-color: #00046E;
+    color:#f5f5f5;
+    border-radius: 3px;
+
+
+    /*font-weight:bold; 
     margin:5px; 
-    padding:4px 6px; 
-    background:violet; 
-    color:#00046E; 
+    padding:4px 6px;*/ 
 }
 
-.wrap{padding:10px;}
+.last{
+    height: 30px;
+    width: 130px;
+    border: none; 
+    background-color: #00046E;
+    color:#f5f5f5;
+    border-radius: 3px;
+}
 
 .pop_wrap{
     position:fixed;
@@ -189,7 +249,7 @@
     left:0; 
     right:0; 
     bottom:0; 
-    background:violet; 
+    background:#00046E;
     font-size:0; 
     text-align:center;
 }

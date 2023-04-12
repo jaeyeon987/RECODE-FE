@@ -9,7 +9,8 @@
         <script src="jquery-3.6.3.min.js"></script>
         <script src="jquery-ui.min.js"></script>
         
-        <script src="register.js"></script>
+        <script src="register copy.js"></script>
+        <script src="pop.js"></script>
     </head>
 
     <body class = "first-grid">
@@ -31,7 +32,7 @@
 
             <div id = "body">
                 <div></div>
-                <div class ="form-box md-box">
+                <div class ="from-box">
                     <div class ="inner">
                 
                         <from id = "fsorm-register">
@@ -45,7 +46,9 @@
                             <span class = "notic-email">이메일 </span> 
                             <p></p>
                             <span>
+                                <!--한번-->
                                 <input id = "inpemail" type = "text" name = "email" placeholder="이메일 주소 입력" autofocus />
+                                <!--한번-->
                                 <input id = "btn-email" type = "button" value = "인증코드 발급" style = "font-weight: 600" onclick= "
                                 if(document.querySelector('#btn-email').value === '인증코드 발급'){
                                     document.querySelector('#btn-email').value = '인증코드 재발급';
@@ -68,6 +71,7 @@
                             <span class = "auth-code">인증 확인</span> <span class = "notice-auth">*이메일의 메일함을 확인해주세요</span>
                             <p></p>
                             <span>
+                                <!--한번-->
                                 <input id = "inp-auth" type = "auth" name = "auth" placeholder="인증코드 입력" autofocus />
                                 <input id = "btn" type = "button" value = "확인" style = "font-weight: 600" > 
                             </span>    
@@ -79,7 +83,7 @@
                             <p></p>
                             <span>
                                 <input id = "inp-nick" type = "nick" name = "nick" placeholder="닉네임 입력" autofocus />
-                                <input id = "btn" type = "button" value = "확인" style = "font-weight: 600" >
+                                <input id = "nickbtn" type = "button" value = "확인" style = "font-weight: 600" >
                             </span>
                             <div class = "txt-warning"></div>
 
@@ -122,30 +126,17 @@
                                 <input id = "inp-accept" type = "checkbox" /> <label for = "inp-accept">회원가입을 위한 개인정보 제공에 동의합니다.</label>
                                 <span class = "txt-warning right"></span>
                             </div>
-
-                           <!--
-                            <div class="wrap">
-                                <a href="#pop_info_1" class="btn_open">가입하기</a>
-                              
-                                <div id="pop_info_1" class="pop_wrap" style="display:none;">
-                                  <div class="pop_inner">
-                                    <p class="dsc">가입축하드립니다.</p>
-                                    <button type="button" class="btn_close">닫기</button>
-                                  </div>
-                                </div>
-                            </div>
-                            -->
-
-                            <input a href="#pop_info_1"  type = "button" id = "btn-submit" value = "가입하기" style=" margin-left: 80px; font-weight: 600;" ></a>
                             
-                            <div id="pop_info_1" class="pop_wrap" style="display:none;">
-                                <div class="pop_inner">
-                                  <p class="dsc">가입 축하드립니다.</p>
-                                  <button type="button" class="btn_close">닫기</button>
+                            <div class="wrap">
+                                <a href="#pop_info_1" id="btn_open" style=" margin-left: 80px; font-weight: 600;">가입하기</a>
+                                
+                                <div id="pop_info_1" class="pop_wrap" style="display:none;">
+                                    <div class="pop_inner">
+                                      <p class="dsc">가입 축하드립니다.</p>
+                                      <button type="button" class="btn_close">닫기</button>
+                                    </div>
                                 </div>
                               </div>
-                            
-                            
                         </from>
                     </div>
                 </div>

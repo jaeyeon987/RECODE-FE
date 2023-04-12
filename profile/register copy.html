@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko">
+    <head> 
+        <title>회원가입</title>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="jquery-ui.min.css">
+        <script src="jquery-3.6.3.min.js"></script>
+        <script src="jquery-ui.min.js"></script>
+        
+        <!--<script src="register copy.js"></script>-->
+        <script src="pop.js"></script>
+    </head>
+<!-- 닉네임 비밀번호 완료-->
+    <body class = "first-grid">
+        <div id ="container">
+            <div id = "header" class = "inverted">
+                <div>
+                    <a href="index.html"><span></span></a>
+                    <div class = "menu-items right">
+                        <a href="register.html">회원가입</a>
+                        <img src = "BOOK.png" style =" width:50px; height:50px; "/>
+                        <a href="javascript:showLogin()">로그인</a>
+                    </div>
+                    <p></p>
+                    <div class ="reg" style= "margin-top: 20px;">회원가입</div>
+                    <div class = "info" style= "margin-top: 10px;">필수 정보를 입력하세요</div>
+                    <p></p>
+                </div>
+            </div>
+
+            <div id = "body">
+                <div></div>
+                <div class ="from-box">
+                    <div class ="inner">
+                
+                        <from id = "fsorm-register">
+                            <!--
+                            <div class = "grid">
+                                <div class = "grid-email">이메일</div>
+                                <div class = "grid-ewhain">*ewhain 계정으로만 가입 가능합니다.</div>
+                            </div>
+                            -->
+                            <div style= "margin-top: 30px;"></div>
+                            <span class = "notic-email">이메일 </span> 
+                            <p></p>
+                            <span>
+                                <!--한번-->
+                                <input id = "inpemail" type = "email" name = "email" placeholder="이메일 주소 입력" autofocus />
+                                <!--한번-->
+
+                                <input id = "btn-email" type = "button" value = "인증코드 발급" style = "font-weight: 600" onclick="emailcheck()">
+                                <!--<input id = "btn-email" type = "button" value = "인증코드 발급" style = "font-weight: 600" onclick= " onclick= "emailcheck()"
+                                    if(document.querySelector('#btn-email').value === '인증코드 발급'){
+                                        document.querySelector('#btn-email').value = '인증코드 재발급';
+                                    }
+                                    else{ document.querySelector('#btn-email').value = '인증코드 재발급';}
+                                    "
+                                >-->
+                                
+                                <!--
+                                    document.querySelector('btn-email').innerHTML='innerHTML로 문구를 띄어주다'
+                                    <button id = "btn-email" type = "email" onclick="document.getElementById('print').innerHTML='innerHTML로 문구를 띄어주다'">인증코드 발급</button>
+                                -->
+                            </span>
+                            
+                            <div id="valueprint" style="border: 5px solid whitesmoke;"></div>
+                            <div class = "txt-warning"></div>
+                            
+                            <div style= "margin-top: 30px;"></div>
+                            <!--<div style= "margin-top: 30px;"></div>-->
+                            <span class = "auth-code">인증 확인</span> <span class = "notice-auth">*이메일의 메일함을 확인해주세요</span>
+                            <p></p>
+                            <span>
+                                <!--한번-->
+                                <input id = "inp-auth" type = "auth" name = "auth" placeholder="인증코드 입력" autofocus />
+                                <input id = "btn" type = "button" value = "확인" style = "font-weight: 600" > 
+                            </span>    
+                            <div class = "txt-warning"></div>
+
+                            <p></p>
+                            <div style= "margin-top: 30px;"></div>
+                            <span class = "nickname">닉네임</span>
+                            <p></p>
+                            <span>
+                                <input id = "nick" type = "nick" name = "nick" placeholder="닉네임 입력" autofocus />
+                                <input id = "nickbtn" type = "button" value = "확인" style = "font-weight: 600" onclick = "nickcheck()">
+                            </span>
+                            <div class = "txt-warning"></div>
+
+                            <p></p>
+                            <div style= "margin-top: 30px;"></div>
+                            <span class = "password">비밀번호</span> <span class = "notice-auth">*8~16자, 영문, 숫자, 특수문자를 포함한 비밀번호를 입력해주세요</span>
+                            <p></p>
+                            <span>
+                                <input id = "passwd" type = "password" name = "passwd" placeholder="비밀번호 입력" autofocus/>
+                                <input id = "btn" type = "button" value = "확인" style = "font-weight: 600" onclick = "pwdcheck()">
+                            </span>
+                            <div class = "txt-warning"></div>
+
+                            <p></p> 
+                            <div style= "margin-top: 30px;"></div>
+                            <span class = "password2">비밀번호 확인</span>
+                            <p></p>
+                            <span>
+                                <input id = "passwd2" type = "password" name = "passwd2" placeholder="비밀번호 확인" autofocus/>
+                                <input id = "btnpassword" type = "button" value = "확인" style = "font-weight: 600" onclick = "pwd2check()" >
+                            </span>
+                            <div class = "alertpassword"></div>
+                            
+                            <!--
+                            <div class = "div-gender">
+                                <input id = "inp-male" type = "radio" name = "gender" value ="m" /> <label for = "inp-male">남</label>
+                                <input id = "inp-female" type = "radio" name = "gender" value ="f" /> <label for = "inp-female">여</label>
+                                <span class = "txt-warning right"></span>
+                            </div>
+
+                            <div class = "div-birth">
+                                <select id = "sel-birth">
+                                    <option value = "">출생년도 선택</option>
+                                </select>
+                                <span class = "txt-warning right"></span>
+                            </div>
+                            -->
+
+                            <div style= "margin-top: 25px;"></div>
+                            <div class = "div-accept">
+                                <input id = "inp-accept" type = "checkbox" /> <label for = "inp-accept">회원가입을 위한 개인정보 제공에 동의합니다.</label>
+                                <span class = "txt-warning right"></span>
+                            </div>
+                            
+
+                            <div class="wrap">
+                                <a href="#pop_info_1" class="btn_open" style=" margin-left: 80px; font-weight: 600;" onclick = "regi()">가입하기</a>
+                                <div id="pop_info_1" class="pop_wrap" style="display:none;">
+                                  <div class="pop_inner">
+                                    <p class="dsc">가입 축하드립니다</p>
+                                    <button type="button" class="btn_close">로그인 하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </from>
+                    </div>
+                </div>
+            </div>            
+        </div>        
+    </body>    
+</html>
+
+
+<!--
+<button id = "btn-auth" type = "auth">확인</button>
+<button id = "btn-nick" type = "nick">확인</button>
+<button id = "btn-passwd" type = "password">확인</button>
+<button id = "btn-passwd" type = "password">확인</button>
+-->

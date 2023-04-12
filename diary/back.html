@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>일기</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+  <link rel="stylesheet" href="diary.css">
+</head>
+<body id = "grid" align = "center">
+    <div class = "head"> 
+      <i class="far fa-calendar-check" style="margin-left: 180px; height: 30px; width: 30px;"></i>
+      로고 자리~~ 세밀한 위치 조정은 로고 이후에 진행 예정
+    </div>
+
+    <div class = "date">
+      <button class="prev">&#60;</button>
+      <div class = "datebox"></div>
+    </div>
+
+    <div class = "main">
+      <div></div>
+      <div class = "secondgrid">
+        <div class = "question">
+        
+          <div id ="q1">
+            <div id = "quest">
+              임시
+            </div>
+            <!--<input id = "quest" type ="text" name = "quest" value = "임시">-->
+          </div>
+          <div id ="q2">
+            <div id = "quest">
+              임시2
+            </div>
+          </div>
+          <div id = "q3">
+            <div id = "quest">
+              임시3
+            </div>
+          </div>
+          <div id = "q4">
+            <div id = "quest">
+              임시4
+            </div>
+          </div>
+        </div>
+
+        <div class="btns" align = "right">
+          <span>
+            <input id = "tembtn" type = "button" name = "temp" value = "임시저장" autofocus />
+            <input id = "storebtn" type="button" name="store" value = "저장하기">
+          </span>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    
+</body>
+</html>
+
+<div class = "datebox">
+  <div class = "year">
+    <div></div>
+    <div class = "years"></div>
+    <div></div>
+  </div>
+  <div class = "month">
+    <div></div>
+    <div class = "months"></div>
+    <div></div>
+  </div>
+  <div class = "date">
+    <div></div>
+    <div class = "dates"></div>
+    <div></div>
+  </div>
+</div>
+
+
+
+.datebox {
+  border: 3px solid #2d3091;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 3fr 2fr 3fr;
+}
+.year {
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.years{
+  align-items: center;
+  background-color: #944c92;
+  border: 3px solid #944c92;
+  border-radius: 10px;
+}
+
+.month {
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.months{
+  align-items: center;
+  background-color: #944c92;
+  border: 3px solid #944c92;
+  border-radius: 10px;
+}
+
+.date {
+  margin-bottom: 0;
+  
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.dates{
+  align-items: center;
+  background-color: #944c92;
+  border: 3px solid #944c92;
+  border-radius: 10px;
+}

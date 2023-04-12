@@ -1,37 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>로그인</title>
+  <title>일기</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
   <link rel="stylesheet" href="diary.css">
+  <script src="diarydate.js"></script>
+  <script src="data.js"></script>
 </head>
-<body id = "grid">
-
+<body id = "grid" align = "center">
     <div class = "head"> 
-        <i class="far fa-calendar-check" style="margin-left: 180px;"></i>
+      <button class="prev">&#60;</button>
+      <div>
+        <img class="img1" src="logo.png" style="width: 80px; height: 80px;">
+      </div>
+      <i class="far fa-calendar-check" style="margin-left: 180px; height: 50px; width: 30px;"></i>
     </div>
 
-    <div class = "login">
+    <div class = "main">
       <div></div>
-      <div>
-        <img id="img" src="pencil.png" style=" width:50px; height:50px; ">
-        <div id="reg"></div>
+      <div class = "secondgrid">
+        <div class = "datebox">
+          <div></div>
+          <div class = "main-year"></div>
+          <div></div>
+          <div class = "main-month"></div>
+          <div></div>
+          <div class = "main-date"></div>
+          <div></div>
+        </div>
+
+        <div class = "question" style="overflow:auto;">
+        
+          <div id ="q1">
+            <div id = "quest">
+              예시 1
+            </div>
+            <!--<input id = "quest" type ="text" name = "quest" value = "임시">-->
+          </div>
+          <div id ="q2">
+            <div id = "quest">
+              예시 2
+            </div>
+          </div>
+          <div id = "q3">
+            <div id = "quest">
+              예시 3 
+            </div>
+          </div>
+          <div id = "q4">
+            <div id = "quest">
+              예시 4
+            </div>
+          </div>
+
+          <div id ="q5">
+            <div id = "quest">
+              예시 5
+            </div>
+          </div>
+
+          <div id ="q6">
+            <div id = "quest">
+              예시 6
+            </div>
+          </div>
+
+          <div></div>
+        </div>
+
+        <div class="btns" align = "right">
+          <span>
+            <input id = "tembtn" type = "button" name = "temp" value = "임시저장" autofocus />
+            <input id = "storebtn" type="button" name="store" value = "저장하기">
+          </span>
+        </div>
       </div>
       <div></div>
     </div>
+
     
-    <div class="login-form">
-      <div></div>
-      <form>
-        <span>
-          <input id = "inpemail" type = "text" name = "email" placeholder="이메일 주소 입력" autofocus />
-          <input id = "inppassword" type="text" name="password" placeholder="비밀번호">
-        </span>
-        <input id = "submit-btn" type="button" value="로그인" class="submit-btn">
-        <br>
-        <input id="regist" type="button" value="회원가입" onclick="location.href='register.html'">
-      </form>
-      <div></div>
-    </div>
 </body>
 </html>

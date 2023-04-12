@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<title>register</title>
+<script>
+	window.addEventListener('load', function() {
+		var signup = document.querySelector('#signup');
+		
+		//signup버튼을 클릭했을때
+		signup.addEventListener('click', function() {
+			
+			// 아이디와 비번,성별,취미,생일,나이,이메일,메모 객체 셋팅  
+			var id = document.querySelector('#id');
+			var pw1 = document.querySelector('#pw1');
+			var pw2 = document.querySelector('#pw2');
+			var gender = document.querySelectorAll(".gender");
+			var hobby = document.querySelectorAll(".hobby");
+			var birth = document.querySelector('#birth');
+			var age = document.querySelector('#age');
+			var email = document.querySelector('#email');
+			var memo = document.querySelector('#memo');
+			
+	
+			// 전체 검사
+			// 아이디가 공백이거나 4글자 미만이면
+			if (id.value == '' || id.value.length < 4) {
+				alert('아이디를 4자이상!');
+				//id포커스
+				id.focus();
+			// 비밀번호가 4자리 미만이거나 숫자가 아닐때
+			} else if (pw1.value.length < 4 || isNaN(pw1.value)) {
+				alert('비번 숫자로 4자이상쓰셈');
+				//비밀번호 포커스
+				pw1.focus();
+			// 비밀번호가 처음입력한 값과 다를시
+			} else if (pw1.value != pw2.value) {
+				alert('패스워드가 일치하지 않습니다.');
+				pw2.focus();
+			// 성별이 체크가 안되었을시
+			} else if (genderVal == false) {
+				alert("성별을 입력하세요!");
+				gender[0].focus();
+			// 취미가 2개이상 체크되지 않았을시
+			} else if (count < 2) {
+				alert("취미를 2개이상 체크하세요!");
+				hobby[0].focus();
+			// 생년월일이 입력되지 않았을시
+			} else if (birth.value == '') {
+				alert('생일입력!');
+				birth.focus();
+			// 나이가 공백이거나 숫자가 아닐때
+			} else if (age.value == '' || isNaN(age.value)) {
+				alert('나이값을 제대로 입력하세요 ')
+				age.focus();
+			// 이메일이 입력되지 않았을시
+			} else if (email.value == '') {
+				alert('이메일 공백안됨');
+				email.focus();
+			// 메모가 공백일때
+			} else if (memo.value == '') {
+				alert('메모채우셈');
+				memo.focus();
+			// 전부완료되면 jjdev카페로 이동
+			} else {
+				location.href = "http://cafe.naver.com/jjdev";
+			}
+
+		});
+	});
+</script>
+</head>
+<body>
+	<form name=fom>
+		<fieldset>
+			<legend>회원가입</legend>
+			<table>
+				<tr>
+					<td>ID</td>
+					<td><input type="text" id="id" name="id"></td>
+				</tr>
+				<tr>
+					<td>PW<br>확인
+					</td>
+					<td><input type="password" id="pw1" name="pw1"><br>
+						<input type="password" id="pw2" name="pw2"></td>
+				</tr>
+				<tr>
+					<td>생일</td>
+					<td><input type="date" id="birth" name="birth"></td>
+				</tr>
+				<tr>
+					<td>이메일</td>
+					<td><input type="text" id="email" name="email"> @ <select
+						id="url">
+							<option>naver.com</option>
+							<option>daum.net</option>
+							<option>nate.com</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="button" id="signup"
+						value="signup"> <input type="reset" value="reset">
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+
+</body>
+</html>
+
+<div class="wrap" style="margin-left: 80px;">
+	<a href="#pop_info_1" class="btn_open" style=" margin-left: 80px; font-weight: 600;" type="button" onclick = "regi()">가입하기</a>
+	<div id="pop_info_1" class="pop_wrap" style="display:none;">
+	  <div class="pop_inner">
+		<p class="dsc">가입 축하드립니다</p>
+		<button type="button" class="btn_close">로그인 하기</button>
+		</div>
+	</div>
+</div>
